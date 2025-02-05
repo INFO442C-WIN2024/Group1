@@ -1,1 +1,2 @@
-# Group1_BudgetBuddy
+# Group1
+
