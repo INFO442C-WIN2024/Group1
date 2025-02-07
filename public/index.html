@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+  
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!DOCTYPE html>
+    <html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>金融人格测试</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                background-color: #f4f4f4;
+                margin: 20px;
+            }
+            .container {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                width: 80%;
+                max-width: 500px;
+                margin: auto;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            }
+            button {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: none;
+                border-radius: 5px;
+                background: #007bff;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            button:hover {
+                background: #0056b3;
+            }
+            #result {
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="container">
+        <h2>金融人格测试</h2>
+        <div id="question-container">
+            <p id="question">加载中...</p>
+            <div id="options"></div>
+        </div>
+        <button id="next-btn" style="display: none;" onclick="nextQuestion()">下一题</button>
+        <div id="result"></div>
+    </div>
+    
+    <script>
+        const questions = [
+            {
+                question: "你如何处理大额消费？",
+                options: {
+                    "🐿️🐢": "提前规划存钱",
+                    "🐬🦅": "适当规划",
+                    "🦊🦘": "直接买"
+                }
+            },
+            {
+                question: "你会冲动消费吗？",
+                options: {
+                    "🐢🐿️": "很理性",
+                    "🐬🦅🐅": "偶尔",
+                    "🦊🦘": "经常冲动"
+                }
+            },
+            {
+                question: "你是否有紧急储蓄？",
+                options: {
+                    "🐿️🐢🦅": "有存款",
+                    "🐬🐅": "存一点",
+                    "🦘🦊": "没有存款"
+                }
+            }
+        ];
+    
+        let currentQuestion = 0;
+        let scores = { "🐿️": 0, "🐅": 0, "🐬": 0, "🦅": 0, "🐢": 0, "🦊": 0, "🦘": 0 };
+    
+        function loadQuestion() {
+            const questionData = questions[currentQuestion];
+            document.getElementById("question").textContent = questionData.question;
+    
+            const optionsContainer = document.getElementById("options");
+            optionsContainer.innerHTML = ""; // 清空旧的选项
+    
+            Object.entries(questionData.options).forEach(([types, text]) => {
+                const button = document.createElement("button");
+                button.textContent = text;
+                button.onclick = () => selectAnswer(types);
+                optionsContainer.appendChild(button);
+            });
+    
+            document.getElementById("next-btn").style.display = "none";
+        }
+    
+        function selectAnswer(types) {
+            types.split("").forEach(type => scores[type]++); // 为对应金融人格加分
+            document.getElementById("next-btn").style.display = "block";
+        }
+    
+        function nextQuestion() {
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+    
+        function showResult() {
+            let maxScore = Math.max(...Object.values(scores));
+            let bestTypes = Object.keys(scores).filter(type => scores[type] === maxScore);
+    
+            const resultText = `你的金融人格是：${bestTypes.join(" + ")} 🎉`;
+            document.getElementById("question-container").style.display = "none";
+            document.getElementById("next-btn").style.display = "none";
+            document.getElementById("result").textContent = resultText;
+        }
+    
+        loadQuestion();
+    </script>
+    
+    </body>
+    </html>
+    
+</html>
