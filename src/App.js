@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import IntroductionPage from './IntroductionPage';
+import QuizPage from './QuizPage';
+import PersonalityTypes from './PersonalityTypes';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <nav className="navbar">
+        <h1>Financial Habit Quiz</h1>
+        <ul>
+          <li>
+            <Link to="/">Introduction</Link>
+          </li>
+          <li>
+            <Link to="/quiz">Quiz</Link>
+          </li>
+          <li>
+            <Link to="/personality">Personality Types</Link>
+          </li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<IntroductionPage />} />
+        <Route path="/quiz" element={<QuizPage />} />
+        <Route path="/personality" element={<PersonalityTypes />} />
+      </Routes>
     </div>
   );
 }
