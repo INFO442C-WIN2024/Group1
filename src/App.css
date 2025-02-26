@@ -17,9 +17,10 @@ body {
   background: #fff;
 }
 
+/* 导航栏修改为深蓝色 */
 .navbar {
   width: 100%;
-  background-color: #4B2E83;  
+  background-color: #2C3E50;  
   color: #fff;
   padding: 15px 20px;
   display: flex;
@@ -71,7 +72,7 @@ body {
 
 .nav-button,
 .submit-button {
-  background: linear-gradient(145deg, #6e42aa, #4B2E83);
+  background: linear-gradient(145deg, #3A4B63, #2C3E50);
   border: none;
   color: #fff;
   padding: 12px 24px;
@@ -98,7 +99,7 @@ body {
 footer {
   text-align: center;
   padding: 20px;
-  background: #4B2E83;
+  background: #2C3E50;
   color: #fff;
 }
 
@@ -138,7 +139,7 @@ footer {
 
 .personality-header {
   font-size: 2rem;
-  color: #4B2E83;
+  color: #2C3E50;
   margin-bottom: 10px;
 }
 
@@ -187,7 +188,7 @@ footer {
 
 .personality-info h3 {
   margin-bottom: 10px;
-  color: #4B2E83;
+  color: #2C3E50;
 }
 
 .personality-info p {
@@ -208,7 +209,7 @@ footer {
 
 .quiz-header h2 {
   font-size: 2.2rem;
-  color: #4B2E83; 
+  color: #2C3E50; 
   margin-bottom: 10px;
 }
 
@@ -228,7 +229,7 @@ footer {
 }
 
 .question-card h3 {
-  color: #4B2E83;
+  color: #2C3E50;
   margin-bottom: 15px;
 }
 
@@ -275,7 +276,7 @@ footer {
 
 .nav-btn,
 .submit-btn {
-  background: linear-gradient(145deg, #6e42aa, #4B2E83);
+  background: linear-gradient(145deg, #3A4B63, #2C3E50);
   border: none;
   color: #fff;
   padding: 12px 30px;
@@ -304,6 +305,25 @@ footer {
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   text-align: center;
+}
+
+/* 改善 Start 按钮样式 */
+.start-quiz-button {
+  background: linear-gradient(145deg, #3A4B63, #2C3E50);
+  border: none;
+  color: #fff;
+  padding: 14px 28px;
+  margin-top: 20px;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.start-quiz-button:hover {
+  background: linear-gradient(145deg, #2C3E50, #3A4B63);
+  transform: translateY(-3px);
 }
 
 @media (max-width: 768px) {
@@ -356,5 +376,3 @@ footer {
     margin: 5px 0;
   }
 }
-
-

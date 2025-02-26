@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './App.css';
 
 const IntroductionPage = () => {
+  const navigate = useNavigate();
+
   const handleStartQuiz = () => {
-    window.location.href = 'https://info442c-win2024.github.io/Group1/quiz';
+    navigate('/quiz');
   };
 
   return (
@@ -21,7 +24,6 @@ const IntroductionPage = () => {
         <p>
           Get ready to embark on a journey of self-discovery – your wallet might just thank you for it!
         </p>
-        {/* 添加 Start Quiz 按钮 */}
         <button className="start-quiz-button" onClick={handleStartQuiz}>
           Start Quiz
         </button>
