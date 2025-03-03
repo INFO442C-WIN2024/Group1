@@ -1,186 +1,335 @@
 export const questions = [
-    {
-      id: 1,
-      question: "When you receive a surprise bonus, what’s your first instinct?",
-      options: [
-        { option: "A) Save it in a dedicated savings account.", type: "Ant" },
-        { option: "B) Invest it in a diversified portfolio.", type: "Owl" },
-        { option: "C) Put it aside to boost your emergency fund.", type: "Bear" },
-        { option: "D) Spend it on a fun outing with friends.", type: "Dolphin" },
-        { option: "E) Stash it away for a big future purchase.", type: "Squirrel" },
-        { option: "F) Look for a quick, high-reward investment opportunity.", type: "Fox" }
-      ]
-    },
-    {
-      id: 2,
-      question: "How do you plan your monthly budget?",
-      options: [
-        { option: "A) I meticulously record every expense and save a set percentage.", type: "Ant" },
-        { option: "B) I craft a detailed plan covering bills, savings, and investments.", type: "Owl" },
-        { option: "C) I always ensure I have a reserve for unexpected costs.", type: "Bear" },
-        { option: "D) I leave room for spontaneous spending on experiences.", type: "Dolphin" },
-        { option: "E) I adjust as I go, consistently building up my savings.", type: "Squirrel" },
-        { option: "F) I watch for opportunities to invest any surplus immediately.", type: "Fox" }
-      ]
-    },
-    {
-      id: 3,
-      question: "What’s your reaction when the market dips?",
-      options: [
-        { option: "A) I see it as a chance to buy more stocks.", type: "Fox" },
-        { option: "B) I review my long-term strategy and stay the course.", type: "Owl" },
-        { option: "C) I double-check my savings to ensure I’m covered.", type: "Bear" },
-        { option: "D) I feel a bit anxious and consider increasing my savings.", type: "Squirrel" },
-        { option: "E) I trust that downturns are normal and stick to my plan.", type: "Ant" },
-        { option: "F) I chat with friends about it and weigh some alternative ideas.", type: "Dolphin" }
-      ]
-    },
-    {
-      id: 4,
-      question: "How do you approach your financial goals?",
-      options: [
-        { option: "A) I set strict budgets and work diligently to meet them.", type: "Ant" },
-        { option: "B) I plan every detail with timelines and research.", type: "Owl" },
-        { option: "C) I focus on building a strong emergency fund first.", type: "Bear" },
-        { option: "D) I balance saving with enjoying life’s experiences.", type: "Dolphin" },
-        { option: "E) I steadily accumulate savings for that big purchase.", type: "Squirrel" },
-        { option: "F) I seize investment opportunities as soon as they arise.", type: "Fox" }
-      ]
-    },
-    {
-      id: 5,
-      question: "When considering a big purchase, you…",
-      options: [
-        { option: "A) Analyze all options and focus on long-term benefits.", type: "Owl" },
-        { option: "B) Ensure it fits within your strict budget.", type: "Ant" },
-        { option: "C) Check that your safety net is intact first.", type: "Bear" },
-        { option: "D) Consider how it enhances your lifestyle and social image.", type: "Dolphin" },
-        { option: "E) Save up gradually until you have enough.", type: "Squirrel" },
-        { option: "F) Look for deals and invest if it’s a smart move.", type: "Fox" }
-      ]
-    },
-    {
-      id: 6,
-      question: "How often do you check your bank statements or investment portfolio?",
-      options: [
-        { option: "A) Daily—I like every penny accounted for.", type: "Ant" },
-        { option: "B) Weekly—to fine-tune my strategy.", type: "Owl" },
-        { option: "C) Only when needed, to ensure I have enough reserves.", type: "Bear" },
-        { option: "D) Occasionally, usually after a fun outing or purchase.", type: "Dolphin" },
-        { option: "E) Regularly, just to watch my savings grow.", type: "Squirrel" },
-        { option: "F) Frequently, so I can spot new opportunities.", type: "Fox" }
-      ]
-    },
-    {
-      id: 7,
-      question: "How do you feel about investing in the stock market?",
-      options: [
-        { option: "A) It’s a calculated risk when backed by thorough research.", type: "Owl" },
-        { option: "B) I invest conservatively only after building a solid savings base.", type: "Bear" },
-        { option: "C) I find it exciting and see it as a way to boost wealth.", type: "Fox" },
-        { option: "D) I’m cautious but understand its long-term benefits.", type: "Ant" },
-        { option: "E) I prefer a mix—save first, then explore investments.", type: "Squirrel" },
-        { option: "F) I sometimes invest on a whim, following trends with friends.", type: "Dolphin" }
-      ]
-    },
-    {
-      id: 8,
-      question: "What’s your approach when an unexpected expense arises?",
-      options: [
-        { option: "A) I tap into my emergency fund.", type: "Bear" },
-        { option: "B) I reallocate funds from my monthly budget.", type: "Ant" },
-        { option: "C) I adjust my long-term plans and invest less temporarily.", type: "Owl" },
-        { option: "D) I take it in stride—even if it means borrowing.", type: "Dolphin" },
-        { option: "E) I scramble to save more in the following month.", type: "Squirrel" },
-        { option: "F) I look for a quick fix or an extra earning opportunity.", type: "Fox" }
-      ]
-    },
-    {
-      id: 9,
-      question: "How do you balance saving and enjoying life?",
-      options: [
-        { option: "A) I prioritize saving above all else for financial security.", type: "Ant" },
-        { option: "B) I plan both carefully, ensuring long-term comfort.", type: "Owl" },
-        { option: "C) I keep a healthy emergency fund while budgeting for fun.", type: "Bear" },
-        { option: "D) I live for today and sometimes splurge.", type: "Dolphin" },
-        { option: "E) I steadily build savings but treat myself occasionally.", type: "Squirrel" },
-        { option: "F) I invest in opportunities that allow flexibility for fun.", type: "Fox" }
-      ]
-    },
-    {
-      id: 10,
-      question: "When planning for retirement, you…",
-      options: [
-        { option: "A) Consistently contribute to retirement funds.", type: "Ant" },
-        { option: "B) Develop a detailed, long-term strategy.", type: "Owl" },
-        { option: "C) Ensure ample savings for emergencies before focusing on retirement.", type: "Bear" },
-        { option: "D) Enjoy life now, setting aside a moderate amount for later.", type: "Dolphin" },
-        { option: "E) Save diligently, even if it means sacrificing some short-term luxuries.", type: "Squirrel" },
-        { option: "F) Seek high-return investments to boost retirement savings.", type: "Fox" }
-      ]
-    },
-    {
-      id: 11,
-      question: "How do you handle financial advice?",
-      options: [
-        { option: "A) I trust methods I’ve perfected over time.", type: "Ant" },
-        { option: "B) I seek expert opinions and rely on data.", type: "Owl" },
-        { option: "C) I consult with trusted friends before deciding.", type: "Dolphin" },
-        { option: "D) I stick to my instincts, especially when it comes to safety.", type: "Bear" },
-        { option: "E) I gather various perspectives and weigh my options.", type: "Squirrel" },
-        { option: "F) I quickly act on promising tips and trends.", type: "Fox" }
-      ]
-    },
-    {
-      id: 12,
-      question: "How would you describe your overall approach to money?",
-      options: [
-        { option: "A) Careful, disciplined, and methodical.", type: "Ant" },
-        { option: "B) Wise, strategic, and forward-thinking.", type: "Owl" },
-        { option: "C) Cautious, security-focused, and prepared.", type: "Bear" },
-        { option: "D) Fun-loving, social, and sometimes spontaneous.", type: "Dolphin" },
-        { option: "E) Consistently saving and always prepared for the unexpected.", type: "Squirrel" },
-        { option: "F) Bold, opportunistic, and ready to take calculated risks.", type: "Fox" }
-      ]
-    }
-  ];
-  
-  export const quizResultDescriptions = {
-    Ant: {
-      title: "The Disciplined Saver (Ant)",
-      analysis: "You are careful, disciplined, and methodical with your money. You prioritize security and steady growth.",
-      advice: "Keep an eye on opportunities to diversify your investments while maintaining your careful habits.",
-      description: "You’re like an ant—you work hard and always plan ahead. You save little by little and make sure you have enough for later, just like ants store food for winter."
-    },
-    Owl: {
-      title: "The Strategic Planner (Owl)",
-      analysis: "You are wise, analytical, and future-focused. Your detailed planning pays off in long-term stability.",
-      advice: "Continue honing your strategy, and consider balancing analysis with timely actions.",
-      description: "You’re the wise one. You do your homework before spending and always think things through. Like an owl, you keep a careful watch on your finances."
-    },
-    Bear: {
-      title: "The Cautious Guardian (Bear)",
-      analysis: "You focus on security and are well-prepared for uncertainties. While your cautious approach is a strength, it may limit potential growth.",
-      advice: "Consider exploring low-risk investment options to enhance your financial growth.",
-      description: "You put safety first. You keep a solid reserve of money for emergencies, much like a bear prepares for winter. You’re all about being secure and cautious."
-    },
-    Dolphin: {
-      title: "The Social Spender (Dolphin)",
-      analysis: "You enjoy life and value experiences, even if it means spending more in the moment. A little extra planning could go a long way.",
-      advice: "Try to set aside a portion of your income for savings to balance fun and prudence.",
-      description: "You love to enjoy life. You’re not afraid to spend on experiences and having fun, just like a playful dolphin. You believe life is meant to be enjoyed while still keeping an eye on your money."
-    },
-    Squirrel: {
-      title: "The Prepared Hoarder (Squirrel)",
-      analysis: "You are always gathering resources and building a solid safety net. However, you might miss out on growth opportunities by being overly cautious.",
-      advice: "Look into moderate-risk investments to help your savings grow faster.",
-      description: "You’re always saving for a rainy day. Just like a squirrel gathers and hides acorns, you’re busy stashing away money so you’re ready for anything."
-    },
-    Fox: {
-      title: "The Opportunistic Investor (Fox)",
-      analysis: "You are agile and ready to seize financial opportunities by taking calculated risks. Sometimes, your quick decisions may benefit from a little more analysis.",
-      advice: "Balance your adventurous spirit with careful research to maximize your returns.",
-      description: "You’re quick, smart, and ready to grab a good opportunity when it comes along. Like a clever fox, you take smart risks to make the most of your money."
-    }
-  };
-  
+  {
+    id: 1,
+    question: "What do you do when you get paid?",
+    options: [
+      {
+        option: "Save and invest like a responsible adult.",
+        score: { Owl: 3, Squirrel: 2, Fox: 1 },
+      },
+      {
+        option: "Budget carefully and stash away for the future.",
+        score: { Squirrel: 3, Penguin: 2, Capybara: 1 },
+      },
+      {
+        option: "Pay for necessities, then save whatever’s left.",
+        score: { Fox: 3, Capybara: 2, Penguin: 1 },
+      },
+      {
+        option: "Immediately treat myself to a little something (but not too crazy).",
+        score: { "Golden Retriever": 3, Raccoon: 2, Cheetah: 1 },
+      },
+      {
+        option: "Blow it all. YOLO, baby.",
+        score: { Cheetah: 3, "Golden Retriever": 2, Raccoon: 1 },
+      },
+    ],
+  },
+  {
+    id: 2,
+    question: "How do you budget your expenses?",
+    options: [
+      {
+        option: "I track every cent, color-code my spreadsheets, and my Google Sheets look like NASA mission control.",
+        score: { Squirrel: 3, Owl: 2, Penguin: 1 },
+      },
+      {
+        option: "I have a rough budget and stick to it.",
+        score: { Fox: 3, Capybara: 2, Owl: 1 },
+      },
+      {
+        option: "I try, but sometimes I buy stuff impulsively.",
+        score: { Raccoon: 3, "Golden Retriever": 2, Cheetah: 1 },
+      },
+      {
+        option: "Budget? What budget?",
+        score: { Cheetah: 3, "Golden Retriever": 2, Raccoon: 1 },
+      },
+    ],
+  },
+  {
+    id: 3,
+    question: "Your friends invite you on an expensive trip, but you're kinda broke. What do you do?",
+    options: [
+      {
+        option: "Politely say no and stick to my budget.",
+        score: { Squirrel: 3, Penguin: 2, Owl: 1 },
+      },
+      {
+        option: "Try to find a cheaper way to join.",
+        score: { Fox: 3, Capybara: 2, Owl: 1 },
+      },
+      {
+        option: "Go, but cut back on other things to afford it.",
+        score: { Raccoon: 3, Capybara: 2, Fox: 1 },
+      },
+      {
+        option: "Borrow money, max out my card, and worry later.",
+        score: { Cheetah: 3, "Golden Retriever": 2, Raccoon: 1 },
+      },
+    ],
+  },
+  {
+    id: 4,
+    question: "What’s your relationship with credit cards?",
+    options: [
+      {
+        option: "I pay them off in full every month like a boss.",
+        score: { Owl: 3, Squirrel: 2, Fox: 1 },
+      },
+      {
+        option: "I use them responsibly, but sometimes carry a balance.",
+        score: { Fox: 3, Capybara: 2, Owl: 1 },
+      },
+      {
+        option: "I use them often, and I struggle with payments.",
+        score: { Raccoon: 3, Penguin: 2, "Golden Retriever": 1 },
+      },
+      {
+        option: "I max them out and don’t think about it.",
+        score: { Cheetah: 3, Raccoon: 2, "Golden Retriever": 1 },
+      },
+      {
+        option: "I don’t even have one.",
+        score: { Capybara: 3, Cheetah: 2, "Golden Retriever": 1 },
+      },
+    ],
+  },
+  {
+    id: 5,
+    question: "What’s your investing style?",
+    options: [
+      {
+        option: "I actively research and invest regularly.",
+        score: { Owl: 3, Fox: 2, Squirrel: 1 },
+      },
+      {
+        option: "I invest but don’t obsess over it.",
+        score: { Fox: 3, Capybara: 2, Owl: 1 },
+      },
+      {
+        option: "I want to invest, but it’s confusing.",
+        score: { Raccoon: 3, Penguin: 2, "Golden Retriever": 1 },
+      },
+      {
+        option: "Investing is risky, I avoid it.",
+        score: { Cheetah: 3, "Golden Retriever": 2, Capybara: 1 },
+      },
+    ],
+  },
+  {
+    id: 6,
+    question: "You unexpectedly get $500. What do you do?",
+    options: [
+      {
+        option: "Save or invest it immediately.",
+        score: { Owl: 3, Squirrel: 2, Penguin: 1 },
+      },
+      {
+        option: "Pay off some bills.",
+        score: { Penguin: 3, Squirrel: 2, Fox: 1 },
+      },
+      {
+        option: "Buy something useful (books, tech, school stuff).",
+        score: { Fox: 3, Capybara: 2, Owl: 1 },
+      },
+      {
+        option: "Save a little, but also splurge a bit.",
+        score: { Raccoon: 3, "Golden Retriever": 2, Cheetah: 1 },
+      },
+      {
+        option: "Spend it all, treat myself.",
+        score: { Cheetah: 3, "Golden Retriever": 2, Raccoon: 1 },
+      },
+    ],
+  },
+  {
+    id: 7,
+    question: "What’s your biggest financial fear?",
+    options: [
+      {
+        option: "Not having enough savings for emergencies.",
+        score: { Squirrel: 3, Penguin: 2, Fox: 1 },
+      },
+      {
+        option: "Struggling to pay for daily necessities.",
+        score: { Raccoon: 3, "Golden Retriever": 2, Cheetah: 1 },
+      },
+      {
+        option: "Being in debt forever.",
+        score: { Penguin: 3, Squirrel: 2, Owl: 1 },
+      },
+      {
+        option: "Missing out on fun because I have to save.",
+        score: { Cheetah: 3, "Golden Retriever": 2, Raccoon: 1 },
+      },
+      {
+        option: "Not knowing how to make my money grow.",
+        score: { Owl: 3, Fox: 2, Capybara: 1 },
+      },
+    ],
+  },
+];
+
+export const quizResultDescriptions = {
+  Squirrel: {
+    title: "🐿️ Squirrel – The Over-Prepared Budgeter 🐿️",
+    intro:
+      "If financial responsibility were a sport, you'd be the MVP. Squirrels stash away acorns obsessively, just like you meticulously budget and save for the future. You’re always three steps ahead, ensuring your bank account is padded for every possible scenario—because you never know when a financial \"winter\" will hit.",
+    strengths: [
+      "✅ Hyper-organized with finances—probably has a color-coded spreadsheet for tracking expenses.",
+      "✅ Rarely caught off guard by unexpected costs.",
+      "✅ Disciplined saver, great at sticking to financial goals.",
+    ],
+    weaknesses: [
+      "❌ Overthinks every purchase—even small, guilt-free splurges.",
+      "❌ Might hesitate to invest or spend money on experiences.",
+      "❌ Can stress over finances even when there’s no reason to.",
+    ],
+    waysToImprove: [
+      "🔹 Allow yourself to enjoy your money occasionally—your savings won’t collapse because you bought a latte.",
+      "🔹 Diversify savings by investing, so your money grows rather than just sitting in a low-interest account.",
+      "🔹 Set a fun budget so you can spend without guilt while staying financially responsible.",
+    ],
+  },
+  Penguin: {
+    title: "🐧 Penguin – The Debt Warrior 🏋️",
+    intro:
+      "Penguins are resilient, always pushing forward through harsh conditions—just like you with your debt repayment strategy. Your top priority is tackling loans, credit card balances, or student debt with laser focus. Every extra dollar goes toward getting rid of what you owe.",
+    strengths: [
+      "✅ Highly disciplined with money—stays on top of payments.",
+      "✅ Likely has an airtight repayment plan and a solid understanding of credit scores.",
+      "✅ Less likely to fall into financial traps or impulsive spending.",
+    ],
+    weaknesses: [
+      "❌ So focused on paying off debt that they forget to save or enjoy life.",
+      "❌ Might avoid investing due to fear of financial risk.",
+      "❌ Can be overly cautious, missing opportunities to grow wealth.",
+    ],
+    waysToImprove: [
+      "🔹 Balance debt repayment with building an emergency fund—don’t put every extra dollar into loans.",
+      "🔹 Start small with investing while paying off debt, even if it’s just a few dollars a month.",
+      "🔹 Allow yourself occasional guilt-free spending so life isn’t all about financial sacrifice.",
+    ],
+  },
+  Owl: {
+    title: "🦉 Owl – The Investment Guru 📈",
+    intro:
+      "Wise and strategic, the owl is always thinking long-term. You’ve been tracking the stock market since before it was cool, and you know that compound interest is your best friend. You focus on making money work for you rather than just working for money.",
+    strengths: [
+      "✅ Highly knowledgeable about investing and financial growth.",
+      "✅ Prioritizes long-term wealth building over short-term spending.",
+      "✅ Rarely makes impulsive financial decisions.",
+    ],
+    weaknesses: [
+      "❌ Can be too cautious, overanalyzing opportunities and delaying action.",
+      "❌ Might avoid spending on personal enjoyment, even when affordable.",
+      "❌ Can overcomplicate simple financial decisions.",
+    ],
+    waysToImprove: [
+      "🔹 Don’t let analysis paralysis stop you from taking action—sometimes, the best investment is simply starting.",
+      "🔹 Allow yourself to spend on things that bring you happiness in the present.",
+      "🔹 Educate others on investing—your knowledge could help friends and family grow their wealth too.",
+    ],
+  },
+  Fox: {
+    title: "🦊 Fox – The Balanced Planner 🧠",
+    intro:
+      "Clever and resourceful, the fox knows how to get the best deals while staying financially responsible. You have a balanced approach—saving and investing wisely, but also knowing when to treat yourself. You’re the type to stack discounts, use cashback apps, and maximize credit card rewards like a pro.",
+    strengths: [
+      "✅ Smart with money—finds ways to save without extreme sacrifices.",
+      "✅ Balances financial planning with enjoying life.",
+      "✅ Always looking for ways to optimize spending and earning.",
+    ],
+    weaknesses: [
+      "❌ Might overthink financial decisions, leading to indecisiveness.",
+      "❌ Can sometimes take too long to commit to big purchases.",
+      "❌ May miss out on investing in riskier but rewarding opportunities.",
+    ],
+    waysToImprove: [
+      "🔹 Don’t stress too much over small financial optimizations—sometimes, time is more valuable than saving a few dollars.",
+      "🔹 Take calculated investment risks instead of always playing it safe.",
+      "🔹 Focus on long-term financial goals rather than just short-term wins.",
+    ],
+  },
+  Raccoon: {
+    title: "🦝 Raccoon – The Resourceful Hustler 💼",
+    intro:
+      "Raccoons thrive on resourcefulness, making the most out of anything they find. You’re the same way—always looking for a side hustle, finding creative ways to earn money, and stretching every dollar. You might be reselling, flipping items, or cashing in on every deal possible.",
+    strengths: [
+      "✅ Excellent at finding new income streams and making money.",
+      "✅ Quick thinker—adapts to financial situations easily.",
+      "✅ Knows how to get value out of every dollar spent.",
+    ],
+    weaknesses: [
+      "❌ Lacks financial stability—money comes and goes quickly.",
+      "❌ Not the best at long-term financial planning.",
+      "❌ Might rely too much on hustle culture rather than structured savings.",
+    ],
+    waysToImprove: [
+      "🔹 Create a consistent financial plan—hustles are great, but stable savings matter too.",
+      "🔹 Start investing some of your extra earnings so money works for you.",
+      "🔹 Track income and expenses more carefully to avoid living paycheck to paycheck.",
+    ],
+  },
+  Cheetah: {
+    title: "🐆 Cheetah – The Impulsive Spender 💳",
+    intro:
+      "Just like a cheetah, your money moves fast—and usually straight out of your account. You love spontaneity, from last-minute trips to impulse shopping sprees. Life is meant to be lived, and you don’t want financial worries to slow you down.",
+    strengths: [
+      "✅ Enjoys life without financial anxiety.",
+      "✅ Generous and fun-loving—always up for an adventure.",
+      "✅ Great at making memorable experiences.",
+    ],
+    weaknesses: [
+      "❌ Poor savings habits—future-you is always left picking up the pieces.",
+      "❌ High risk of debt and financial instability.",
+      "❌ Avoids budgeting or financial planning.",
+    ],
+    waysToImprove: [
+      "🔹 Set automatic savings so some of your money is stashed away before you spend it.",
+      "🔹 Use a budgeting app to track spending without feeling restricted.",
+      "🔹 Give yourself a \"fun fund\" so you can enjoy life while still saving responsibly.",
+    ],
+  },
+  "Golden Retriever": {
+    title: "🐶 Golden Retriever – The Generous Spender 🎁",
+    intro:
+      "You have a heart of gold—literally. Always treating friends, covering bills, and surprising people with gifts, your generosity knows no bounds. You love making others happy, even if it means stretching your own finances too thin.",
+    strengths: [
+      "✅ Generous and thoughtful—always willing to help.",
+      "✅ Creates strong relationships by showing appreciation through gifts.",
+      "✅ Finds happiness in giving rather than hoarding wealth.",
+    ],
+    weaknesses: [
+      "❌ Struggles to say no, even when money is tight.",
+      "❌ Can sacrifice personal financial security for others.",
+      "❌ Likely to overspend on social obligations.",
+    ],
+    waysToImprove: [
+      "🔹 Set a budget for generosity—give, but not at the expense of your own needs.",
+      "🔹 Practice saying no when needed—helping others shouldn’t leave you struggling.",
+      "🔹 Focus on non-monetary ways to show appreciation, like quality time.",
+    ],
+  },
+  Capybara: {
+    title: "🦫 Capybara – The Chill Saver 🛟",
+    intro:
+      "Unbothered and stress-free, the capybara is all about balance. You don’t obsess over finances, but you also don’t make reckless decisions. You save just enough, spend just enough, and keep life moving at a relaxed pace.",
+    strengths: [
+      "✅ Stays calm about money—no panic, no stress.",
+      "✅ Avoids extreme spending habits.",
+      "✅ Enjoys life without overcomplicating finances.",
+    ],
+    weaknesses: [
+      "❌ Too passive—may miss opportunities to grow wealth.",
+      "❌ Might not be proactive about long-term financial planning.",
+      "❌ Relies on \"it'll work out\" rather than taking action.",
+    ],
+    waysToImprove: [
+      "🔹 Start setting financial goals, even if they’re simple.",
+      "🔹 Consider investing so your savings grow over time.",
+      "🔹 Take a more active role in planning for future expenses.",
+    ],
+  },
+};
