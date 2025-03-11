@@ -1,0 +1,379 @@
+.quiz-page-container {
+    width: 1080px;
+    height: 832px;
+    position: flex;
+    background: #0057FF;
+    margin: 0 auto;
+  }
+  
+  .countdown-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .countdown-modal {
+    background: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .countdown-number {
+    font-size: 48px;
+    font-weight: bold;
+  }
+  
+  /* 结果容器示例 */
+  .result-container {
+    position: absolute;
+    top: 120px;
+    left: 120px;
+    right: 120px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .result-section {
+    margin-top: 20px;
+  }
+  
+
+  .question-number-container {
+    width: 98px;
+    height: 100px;
+    left: 120px;
+    top: 128px;
+    position: absolute;
+  }
+  
+  .circle-background {
+    width: 62px;
+    height: 62px;
+    left: 6px;
+    top: 8px;
+    position: absolute;
+    background: black;
+    border-radius: 9999px;
+  }
+  
+
+  .circle-border {
+    width: 62px;
+    height: 62px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #FED702;
+    border-radius: 9999px;
+    border: 10px black solid;
+  }
+  
+  .question-number-text {
+    width: 65px;
+    height: 68px;
+    left: 9px;
+    top: 20px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 32px;
+    font-family: 'rl-aqva', sans-serif;
+    font-weight: 900;
+    word-wrap: break-word;
+  }
+  
+  .question-text {
+    width: 998px;
+    height: 99px;
+    left: 233px;
+    top: 148px;
+    position: absolute;
+    color: white;
+    font-size: 32px;
+    font-family: 'rl-aqva', sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+  
+  .option-box {
+    width: 496px;
+    height: 95;
+    position: absolute;
+    cursor: pointer; 
+  }
+  
+  .option-bg {
+    width: 496px;
+    height: 95px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: white;
+    border-radius: 30px;
+    border: 10px black solid;
+  }
+  
+  .option-text {
+    width: 418px;
+    height: 52.52px;
+    left: 39px;
+    top: 29.84px;
+    position: absolute;
+    text-align: left;
+    color: black;
+    font-size: 20px;
+    font-family: 'Red Rose', sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+  
+  .option-box-1 {
+    left: 120px;
+    top: 256px;
+  }
+  
+  .option-box-2 {
+    left: 664px;
+    top: 256px;
+  }
+  
+  .option-box-3 {
+    left: 120px;
+    top: 387px;
+  }
+  
+  .option-box-4 {
+    left: 664px;
+    top: 387px;
+  }
+  
+  .option-box-5 {
+    left: 120px;
+    top: 518px;
+  }
+  
+  .selected-option .option-bg {
+    background: #FED702;
+  }
+  
+  /* “Next” */
+  .next-button {
+    width: 231px;
+    height: 69.75px;
+    left: 929px;
+    top: 537px;
+    position: absolute;
+    cursor: pointer;
+  }
+  
+  .next-bg {
+    width: 231px;
+    height: 69.75px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #81ECFF;
+    border-radius: 34.88px;
+    border: 10px black solid;
+  }
+  
+  .next-text {
+    width: 117px;
+    height: 33px;
+    left: 64px;
+    top: 23.75px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-family: 'rl-aqva', sans-serif;
+    font-weight: 900;
+    word-wrap: break-word;
+  }
+  
+  .back-button {
+    width: 231px;
+    height: 69.75px;
+    left: 120px;
+    top: 536px;
+    position: absolute;
+    cursor: pointer;
+  }
+  
+  .back-bg {
+    width: 231px;
+    height: 69.75px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #E681FF;
+    border-radius: 34.88px;
+    border: 7.5px black solid;
+  }
+  
+  .back-text {
+    width: 117px;
+    height: 33px;
+    left: 62px;
+    top: 23.75px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+    font-family: 'rl-aqva', sans-serif;
+    font-weight: 900;
+    word-wrap: break-word;
+  }
+  
+  
+  .progress-line {
+    position: absolute;
+    left: 156.5px;
+    top: 689.5px;
+  }
+  
+  /* 进度圆形容器统一样式 */
+  .progress-circle {
+    width: 71.76px;
+    height: 71.76px;
+    margin-left: 10px;
+    position: absolute;
+  }
+
+  .progress-inner-black {
+    width: 60.76px;
+    height: 60.76px;
+    left: 4.68px;
+    top: 6.24px;
+    position: absolute;
+    background: black;
+    border-radius: 9999px;
+  }
+  
+  .progress-inner-yellow {
+    width: 60.76px;
+    height: 60.76px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #FED702;
+    border-radius: 9999px;
+    border: 10px black solid;
+  }
+  
+
+  .progress-inner-blue {
+    width: 60.76px;
+    height: 60.76px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #0057FF;
+    border-radius: 9999px;
+    border: 10px black solid;
+  }
+  
+  .progress-circle-text {
+    width: 50.7px;
+    height: 53.04px;
+    left: 15.14px;
+    top: 24.36px;
+    position: absolute;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+    font-family: 'rl-aqva', sans-serif;
+    font-weight: 900;
+    word-wrap: break-word;
+  }
+  
+  .circle-1 {
+    left: 120px;
+    top: 652px;
+  }
+  
+  .circle-2 {
+    left: 285px;
+    top: 652px;
+  }
+  
+  .circle-3 {
+    left: 446px;
+    top: 652px;
+  }
+  
+  .circle-4 {
+    left: 607px;
+    top: 652px;
+  }
+  
+  .circle-5 {
+    left: 768px;
+    top: 652px;
+  }
+  
+  .circle-6 {
+    left: 929px;
+    top: 652px;
+  }
+  
+  .circle-7 {
+    left: 1090px;
+    top: 652px;
+  }
+  
+.result-button-back {
+    width: 300px;
+    height: 69.75px;
+    background: #E681FF; 
+    border-radius: 34.88px;
+    border: 7.5px black solid;
+    font-size: 30px;
+    font-family: 'rl-aqva', sans-serif;
+    font-weight: 900;
+    color: black;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .result-button-next {
+    width: 300px;
+    height: 69.75px;
+    background: #81ECFF; 
+    border-radius: 34.88px;
+    border: 10px black solid;
+    font-size: 30px;
+    font-family: 'rl-aqva', sans-serif;
+    font-weight: 900;
+    color: black;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.quiz-wrapper {
+  width: 1080px;  
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .quiz-wrapper {
+    transform: scale(0.35);
+    transform-origin: top left;
+    margin-top: 250px; 
+  }
+}

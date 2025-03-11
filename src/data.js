@@ -1,7 +1,7 @@
 export const questions = [
   {
     id: 1,
-    question: "What do you do when you get paid?",
+    question: "What do you do when you get paid? (All questions' answers can up to 2!)",
     options: [
       {
         option: "Save and invest like a responsible adult.",
@@ -30,7 +30,7 @@ export const questions = [
     question: "How do you budget your expenses?",
     options: [
       {
-        option: "I track every cent, color-code my spreadsheets, and my Google Sheets look like NASA mission control.",
+        option: "I track every cent, color-code my spreadsheets.",
         score: { Squirrel: 3, Owl: 2, Penguin: 1 },
       },
       {
