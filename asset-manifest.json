@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Group1/static/css/main.33c16717.css",
+    "main.js": "/Group1/static/js/main.15b46dd0.js",
+    "static/media/1.mp3": "/Group1/static/media/1.c406c37c201bf10435a7.mp3",
+    "static/media/5.png": "/Group1/static/media/5.efce1553dfc722dd3479.png",
+    "static/media/Squirrel.png": "/Group1/static/media/Squirrel.efce1553dfc722dd3479.png",
+    "static/media/4.png": "/Group1/static/media/4.e8d8496e18e4ef7ef2b4.png",
+    "static/media/Cheetah.png": "/Group1/static/media/Cheetah.e8d8496e18e4ef7ef2b4.png",
+    "static/media/8.png": "/Group1/static/media/8.db796b1143e55ac30e39.png",
+    "static/media/Owl.png": "/Group1/static/media/Owl.db796b1143e55ac30e39.png",
+    "static/media/1.png": "/Group1/static/media/1.2f87e45ce15d35dac224.png",
+    "static/media/GoldenRetriever.png": "/Group1/static/media/GoldenRetriever.2f87e45ce15d35dac224.png",
+    "static/media/2.png": "/Group1/static/media/2.e17df8773f78d78e8a82.png",
+    "static/media/Fox.png": "/Group1/static/media/Fox.e17df8773f78d78e8a82.png",
+    "static/media/6.png": "/Group1/static/media/6.8e4c52d38a8fff0fdd66.png",
+    "static/media/Capybara.png": "/Group1/static/media/Capybara.8e4c52d38a8fff0fdd66.png",
+    "static/media/7.png": "/Group1/static/media/7.c7b16850e2516819f278.png",
+    "static/media/Penguin.png": "/Group1/static/media/Penguin.c7b16850e2516819f278.png",
+    "static/media/3.png": "/Group1/static/media/3.be56d178c4ed123356bb.png",
+    "static/media/Raccoon.png": "/Group1/static/media/Raccoon.be56d178c4ed123356bb.png",
+    "index.html": "/Group1/index.html",
+    "main.33c16717.css.map": "/Group1/static/css/main.33c16717.css.map",
+    "main.15b46dd0.js.map": "/Group1/static/js/main.15b46dd0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.33c16717.css",
+    "static/js/main.15b46dd0.js"
+  ]
+}
