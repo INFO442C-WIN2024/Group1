@@ -1,254 +1,626 @@
-.quiz-page-container {
-    width: 1080px;
-    height: 832px;
-    position: flex;
-    background: #0057FF;
-    margin: 0 auto;
-  }
-  
-  .countdown-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-  }
-  
-  .countdown-modal {
-    background: white;
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  .countdown-number {
-    font-size: 48px;
-    font-weight: bold;
-  }
-  
-  /* 结果容器示例 */
-  .result-container {
-    position: absolute;
-    top: 120px;
-    left: 120px;
-    right: 120px;
-    background: white;
-    color: black;
-    border-radius: 10px;
-    padding: 20px;
-  }
-  
-  .result-section {
-    margin-top: 20px;
-  }
-  
+/* Mobile-first CSS for QuizPage */
 
-  .question-number-container {
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* Quiz Container - Default Mobile Styles */
+.quiz-container {
+  width: 100%;
+  min-height: 100vh;
+  background: #0057FF;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Question Number Circle */
+.question-number {
+  width: 70px;
+  height: 70px;
+  position: relative;
+  margin: 0 auto 20px;
+}
+
+.circle-background {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: black;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}
+
+.circle-border {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: #FED702;
+  border-radius: 50%;
+  border: 7px black solid;
+  top: 0;
+  left: 0;
+}
+
+.question-number-text {
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 24px;
+  font-family: 'rl-aqva', sans-serif;
+  font-weight: 900;
+  width: 100%;
+  top: 15px;
+}
+
+/* Question Text */
+.question-text {
+  color: white;
+  font-size: 24px;
+  font-family: 'rl-aqva', sans-serif;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* Options Container */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Option Box */
+.option-box {
+  width: 100%;
+  height: 85px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.option-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: white;
+  border-radius: 20px;
+  border: 7px black solid;
+}
+
+.option-text {
+  position: absolute;
+  padding: 10px 15px;
+  color: black;
+  font-size: 16px;
+  font-family: 'Red Rose', sans-serif;
+  font-weight: 700;
+  width: calc(100% - 30px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Selected Option */
+.selected-option .option-bg {
+  background: #FED702;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.back-button, .next-button {
+  width: 120px;
+  height: 50px;
+  position: relative;
+  cursor: pointer;
+}
+
+.back-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #E681FF;
+  border-radius: 25px;
+  border: 5px black solid;
+}
+
+.next-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #81ECFF;
+  border-radius: 25px;
+  border: 5px black solid;
+}
+
+.back-text, .next-text {
+  position: absolute;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+  font-family: 'rl-aqva', sans-serif;
+  font-weight: 900;
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+/* Progress Container */
+.progress-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.progress-line {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.progress-circles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.progress-circle {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 5px;
+}
+
+.progress-inner-black {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: black;
+  border-radius: 50%;
+  top: 3px;
+  left: 3px;
+}
+
+.progress-inner-yellow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #FED702;
+  border-radius: 50%;
+  border: 5px black solid;
+  top: 0;
+  left: 0;
+}
+
+.progress-inner-blue {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  background: #0057FF;
+  border-radius: 50%;
+  border: 5px black solid;
+  top: 0;
+  left: 0;
+}
+
+.progress-circle-text {
+  position: absolute;
+  text-align: center;
+  color: black;
+  font-size: 16px;
+  font-family: 'rl-aqva', sans-serif;
+  font-weight: 900;
+  width: 100%;
+  top: 8px;
+}
+
+/* Loading Screen */
+.loading-screen {
+  width: 100%;
+  min-height: 100vh;
+  background: #0057FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.loading-title {
+  color: white;
+  font-size: 36px;
+  font-family: 'rl-aqva', sans-serif;
+  font-weight: 900;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.loading-image-container {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 1s;
+}
+
+.loading-image {
+  width: 150px;
+  height: 150px;
+}
+
+/* Result Page */
+.result-page {
+  width: 100%;
+  background: #0057FF;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.result-card {
+  background: #CFF1FF;
+  border: 7px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.result-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.result-title {
+  margin: 10px 0;
+  font-family: 'rl-aqva', sans-serif;
+  color: black;
+  font-size: 28px;
+}
+
+.result-subtitle {
+  margin: 10px 0;
+  font-family: 'rl-aqva', sans-serif;
+  color: black;
+  font-size: 20px;
+}
+
+.result-animal-image {
+  width: 150px;
+  height: 150px;
+  margin: 10px 0;
+}
+
+.result-content {
+  font-family: 'Red Rose', sans-serif;
+}
+
+.result-section-title {
+  font-weight: 900;
+  font-family: 'rl-aqva', sans-serif;
+  font-size: 22px;
+  margin: 15px 0 10px;
+}
+
+.result-text {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.result-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.result-button-back, .result-button-next {
+  width: 100%;
+  max-width: 250px;
+  height: 50px;
+  background: #E681FF;
+  border-radius: 25px;
+  border: 5px black solid;
+  font-size: 18px;
+  font-family: 'rl-aqva', sans-serif;
+  font-weight: 900;
+  color: black;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-button-next {
+  background: #81ECFF;
+}
+
+/* Tablet Breakpoint */
+@media (min-width: 768px) {
+  .question-number {
+    margin: 0 0 30px 20px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .circle-background, .circle-border {
+    width: 60px;
+    height: 60px;
+  }
+
+  .question-text {
+    font-size: 28px;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  .options-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .option-box {
+    height: 90px;
+  }
+
+  .navigation-buttons {
+    padding: 0 20px;
+  }
+
+  .back-button, .next-button {
+    width: 180px;
+    height: 60px;
+  }
+
+  .back-text, .next-text {
+    font-size: 24px;
+  }
+
+  .progress-circles {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .result-card {
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+
+  .result-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .loading-title {
+    font-size: 60px;
+  }
+
+  .loading-image-container, .loading-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Desktop Breakpoint - match the original design */
+@media (min-width: 1024px) {
+  .quiz-container {
+    width: 1080px;
+    min-height: 832px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+  }
+
+  .question-number {
     width: 98px;
     height: 100px;
+    position: absolute;
     left: 120px;
     top: 128px;
-    position: absolute;
+    margin: 0;
   }
-  
+
   .circle-background {
     width: 62px;
     height: 62px;
     left: 6px;
     top: 8px;
-    position: absolute;
-    background: black;
-    border-radius: 9999px;
   }
-  
 
   .circle-border {
     width: 62px;
     height: 62px;
     left: 0px;
     top: 0px;
-    position: absolute;
-    background: #FED702;
-    border-radius: 9999px;
     border: 10px black solid;
   }
-  
+
   .question-number-text {
     width: 65px;
     height: 68px;
     left: 9px;
     top: 20px;
-    position: absolute;
-    text-align: center;
-    color: black;
     font-size: 32px;
-    font-family: 'rl-aqva', sans-serif;
-    font-weight: 900;
-    word-wrap: break-word;
   }
-  
+
   .question-text {
     width: 998px;
     height: 99px;
+    position: absolute;
     left: 233px;
     top: 148px;
-    position: absolute;
-    color: white;
     font-size: 32px;
-    font-family: 'rl-aqva', sans-serif;
-    font-weight: 700;
-    word-wrap: break-word;
+    padding: 0;
   }
-  
+
+  .options-container {
+    display: block;
+    padding: 0;
+  }
+
   .option-box {
     width: 496px;
-    height: 95;
-    position: absolute;
-    cursor: pointer; 
-  }
-  
-  .option-bg {
-    width: 496px;
     height: 95px;
-    left: 0px;
-    top: 0px;
     position: absolute;
-    background: white;
-    border-radius: 30px;
-    border: 10px black solid;
   }
-  
+
+  .option-box:nth-child(1) {
+    left: 120px;
+    top: 256px;
+  }
+
+  .option-box:nth-child(2) {
+    left: 664px;
+    top: 256px;
+  }
+
+  .option-box:nth-child(3) {
+    left: 120px;
+    top: 387px;
+  }
+
+  .option-box:nth-child(4) {
+    left: 664px;
+    top: 387px;
+  }
+
+  .option-box:nth-child(5) {
+    left: 120px;
+    top: 518px;
+  }
+
+  .option-bg {
+    border: 10px black solid;
+    border-radius: 30px;
+  }
+
   .option-text {
     width: 418px;
     height: 52.52px;
     left: 39px;
     top: 29.84px;
-    position: absolute;
-    text-align: left;
-    color: black;
     font-size: 20px;
-    font-family: 'Red Rose', sans-serif;
-    font-weight: 700;
-    word-wrap: break-word;
+    transform: none;
   }
-  
-  .option-box-1 {
-    left: 120px;
-    top: 256px;
+
+  .navigation-buttons {
+    margin: 0;
+    padding: 0;
   }
-  
-  .option-box-2 {
-    left: 664px;
-    top: 256px;
-  }
-  
-  .option-box-3 {
-    left: 120px;
-    top: 387px;
-  }
-  
-  .option-box-4 {
-    left: 664px;
-    top: 387px;
-  }
-  
-  .option-box-5 {
-    left: 120px;
-    top: 518px;
-  }
-  
-  .selected-option .option-bg {
-    background: #FED702;
-  }
-  
-  /* “Next” */
-  .next-button {
-    width: 231px;
-    height: 69.75px;
-    left: 929px;
-    top: 537px;
-    position: absolute;
-    cursor: pointer;
-  }
-  
-  .next-bg {
-    width: 231px;
-    height: 69.75px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    background: #81ECFF;
-    border-radius: 34.88px;
-    border: 10px black solid;
-  }
-  
-  .next-text {
-    width: 117px;
-    height: 33px;
-    left: 64px;
-    top: 23.75px;
-    position: absolute;
-    text-align: center;
-    color: black;
-    font-size: 30px;
-    font-family: 'rl-aqva', sans-serif;
-    font-weight: 900;
-    word-wrap: break-word;
-  }
-  
+
   .back-button {
     width: 231px;
     height: 69.75px;
+    position: absolute;
     left: 120px;
     top: 536px;
-    position: absolute;
-    cursor: pointer;
   }
-  
+
   .back-bg {
     width: 231px;
     height: 69.75px;
-    left: 0px;
-    top: 0px;
-    position: absolute;
-    background: #E681FF;
-    border-radius: 34.88px;
     border: 7.5px black solid;
+    border-radius: 34.88px;
   }
-  
+
   .back-text {
     width: 117px;
     height: 33px;
     left: 62px;
     top: 23.75px;
-    position: absolute;
-    text-align: center;
-    color: black;
     font-size: 30px;
-    font-family: 'rl-aqva', sans-serif;
-    font-weight: 900;
-    word-wrap: break-word;
   }
-  
-  
+
+  .next-button {
+    width: 231px;
+    height: 69.75px;
+    position: absolute;
+    left: 929px;
+    top: 537px;
+  }
+
+  .next-bg {
+    width: 231px;
+    height: 69.75px;
+    border: 10px black solid;
+    border-radius: 34.88px;
+  }
+
+  .next-text {
+    width: 117px;
+    height: 33px;
+    left: 64px;
+    top: 23.75px;
+    font-size: 30px;
+  }
+
+  .progress-container {
+    width: auto;
+    margin: 0;
+  }
+
   .progress-line {
     position: absolute;
     left: 156.5px;
     top: 689.5px;
+    width: 970px;
   }
-  
-  /* 进度圆形容器统一样式 */
+
+  .progress-circles {
+    display: block;
+  }
+
   .progress-circle {
     width: 71.76px;
     height: 71.76px;
-    margin-left: 10px;
     position: absolute;
+    top: 652px;
+    margin: 0;
+  }
+
+  .progress-circle:nth-child(1) {
+    left: 120px;
+  }
+
+  .progress-circle:nth-child(2) {
+    left: 285px;
+  }
+
+  .progress-circle:nth-child(3) {
+    left: 446px;
+  }
+
+  .progress-circle:nth-child(4) {
+    left: 607px;
+  }
+
+  .progress-circle:nth-child(5) {
+    left: 768px;
+  }
+
+  .progress-circle:nth-child(6) {
+    left: 929px;
+  }
+
+  .progress-circle:nth-child(7) {
+    left: 1090px;
   }
 
   .progress-inner-black {
@@ -256,124 +628,343 @@
     height: 60.76px;
     left: 4.68px;
     top: 6.24px;
-    position: absolute;
-    background: black;
-    border-radius: 9999px;
   }
-  
+
   .progress-inner-yellow {
     width: 60.76px;
     height: 60.76px;
     left: 0px;
     top: 0px;
-    position: absolute;
-    background: #FED702;
-    border-radius: 9999px;
     border: 10px black solid;
   }
-  
 
   .progress-inner-blue {
     width: 60.76px;
     height: 60.76px;
     left: 0px;
     top: 0px;
-    position: absolute;
-    background: #0057FF;
-    border-radius: 9999px;
     border: 10px black solid;
   }
-  
+
   .progress-circle-text {
     width: 50.7px;
     height: 53.04px;
     left: 15.14px;
     top: 24.36px;
-    position: absolute;
-    text-align: center;
-    color: black;
     font-size: 24px;
-    font-family: 'rl-aqva', sans-serif;
-    font-weight: 900;
-    word-wrap: break-word;
-  }
-  
-  .circle-1 {
-    left: 120px;
-    top: 652px;
-  }
-  
-  .circle-2 {
-    left: 285px;
-    top: 652px;
-  }
-  
-  .circle-3 {
-    left: 446px;
-    top: 652px;
-  }
-  
-  .circle-4 {
-    left: 607px;
-    top: 652px;
-  }
-  
-  .circle-5 {
-    left: 768px;
-    top: 652px;
-  }
-  
-  .circle-6 {
-    left: 929px;
-    top: 652px;
-  }
-  
-  .circle-7 {
-    left: 1090px;
-    top: 652px;
-  }
-  
-.result-button-back {
-    width: 300px;
-    height: 69.75px;
-    background: #E681FF; 
-    border-radius: 34.88px;
-    border: 7.5px black solid;
-    font-size: 30px;
-    font-family: 'rl-aqva', sans-serif;
-    font-weight: 900;
-    color: black;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .result-button-next {
-    width: 300px;
-    height: 69.75px;
-    background: #81ECFF; 
-    border-radius: 34.88px;
-    border: 10px black solid;
-    font-size: 30px;
-    font-family: 'rl-aqva', sans-serif;
-    font-weight: 900;
-    color: black;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
   }
 
-.quiz-wrapper {
-  width: 1080px;  
-  margin: 0 auto;
+  /* Loading screen desktop version */
+  .loading-screen {
+    width: 1280px;
+    height: 936px;
+    padding: 128px 120px 341px;
+    margin: 0 auto;
+  }
+
+  .loading-title {
+    width: 1040px;
+    height: 212px;
+    font-size: 128px;
+  }
+
+  .loading-image-container, .loading-image {
+    width: 254px;
+    height: 254px;
+  }
+
+  /* Result page desktop version */
+  .result-page {
+    width: 1280px;
+    padding: 40px;
+    margin: 100px auto 0;
+  }
+
+  .result-card {
+    margin: 20px 350px;
+    width: 650px;
+    border: 10px solid black;
+    border-radius: 30px;
+  }
+
+  .result-title {
+    font-size: 32px;
+  }
+
+  .result-subtitle {
+    font-size: 24px;
+  }
+
+  .result-animal-image {
+    width: 177px;
+    height: 177px;
+  }
+
+  .result-section-title {
+    font-size: 28px;
+  }
+
+  .result-text {
+    font-size: 18px;
+  }
+
+  .result-buttons {
+    margin-left: 150px;
+  }
+
+  .result-button-back, .result-button-next {
+    width: 300px;
+    height: 69.75px;
+    font-size: 30px;
+  }
+
+  .result-button-back {
+    border: 7.5px black solid;
+  }
+
+  .result-button-next {
+    border: 10px black solid;
+  }
 }
 
-@media (max-width: 768px) {
-  .quiz-wrapper {
-    transform: scale(0.35);
-    transform-origin: top left;
-    margin-top: 250px; 
+
+/* This is only the desktop section that needs to be modified */
+
+/* Desktop Breakpoint - match the original design with question and options moved up */
+@media (min-width: 1024px) {
+  .quiz-container {
+    width: 1080px;
+    min-height: 832px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+  }
+
+  .question-number {
+    width: 98px;
+    height: 100px;
+    position: absolute;
+    left: 120px;
+    top: 23px; /* Moved up from 128px by 105px */
+    margin: 0;
+  }
+
+  .circle-background {
+    width: 62px;
+    height: 62px;
+    left: 6px;
+    top: 8px;
+  }
+
+  .circle-border {
+    width: 62px;
+    height: 62px;
+    left: 0px;
+    top: 0px;
+    border: 10px black solid;
+  }
+
+  .question-number-text {
+    width: 65px;
+    height: 68px;
+    left: 9px;
+    top: 20px;
+    font-size: 32px;
+  }
+
+  .question-text {
+    width: 998px;
+    height: 99px;
+    position: absolute;
+    left: 233px;
+    top: 43px; /* Moved up from 148px by 105px */
+    font-size: 32px;
+    padding: 0;
+  }
+
+  .options-container {
+    display: block;
+    padding: 0;
+  }
+
+  .option-box {
+    width: 496px;
+    height: 95px;
+    position: absolute;
+  }
+
+  .option-box:nth-child(1) {
+    left: 120px;
+    top: 151px; /* Moved up from 256px by 105px */
+  }
+
+  .option-box:nth-child(2) {
+    left: 664px;
+    top: 151px; /* Moved up from 256px by 105px */
+  }
+
+  .option-box:nth-child(3) {
+    left: 120px;
+    top: 282px; /* Moved up from 387px by 105px */
+  }
+
+  .option-box:nth-child(4) {
+    left: 664px;
+    top: 282px; /* Moved up from 387px by 105px */
+  }
+
+  .option-box:nth-child(5) {
+    left: 120px;
+    top: 413px; /* Moved up from 518px by 105px */
+  }
+
+  .option-bg {
+    border: 10px black solid;
+    border-radius: 30px;
+  }
+
+  .option-text {
+    width: 418px;
+    height: 52.52px;
+    left: 39px;
+    top: 29.84px;
+    font-size: 20px;
+    transform: none;
+  }
+
+  /* Navigation buttons remain in original position */
+  .navigation-buttons {
+    margin: 0;
+    padding: 0;
+  }
+
+  .back-button {
+    width: 231px;
+    height: 69.75px;
+    position: absolute;
+    left: 120px;
+    top: 536px; /* Original position */
+  }
+
+  .back-bg {
+    width: 231px;
+    height: 69.75px;
+    border: 7.5px black solid;
+    border-radius: 34.88px;
+  }
+
+  .back-text {
+    width: 117px;
+    height: 33px;
+    left: 62px;
+    top: 23.75px;
+    font-size: 30px;
+  }
+
+  .next-button {
+    width: 231px;
+    height: 69.75px;
+    position: absolute;
+    left: 929px;
+    top: 537px; /* Original position */
+  }
+
+  .next-bg {
+    width: 231px;
+    height: 69.75px;
+    border: 10px black solid;
+    border-radius: 34.88px;
+  }
+
+  .next-text {
+    width: 117px;
+    height: 33px;
+    left: 64px;
+    top: 23.75px;
+    font-size: 30px;
+  }
+
+  /* Progress container remains in original position */
+  .progress-container {
+    width: auto;
+    margin: 0;
+  }
+
+  .progress-line {
+    position: absolute;
+    left: 156.5px;
+    top: 689.5px; /* Original position */
+    width: 970px;
+  }
+
+  .progress-circles {
+    display: block;
+  }
+
+  .progress-circle {
+    width: 71.76px;
+    height: 71.76px;
+    position: absolute;
+    top: 652px; /* Original position */
+    margin: 0;
+  }
+
+  .progress-circle:nth-child(1) {
+    left: 120px;
+  }
+
+  .progress-circle:nth-child(2) {
+    left: 285px;
+  }
+
+  .progress-circle:nth-child(3) {
+    left: 446px;
+  }
+
+  .progress-circle:nth-child(4) {
+    left: 607px;
+  }
+
+  .progress-circle:nth-child(5) {
+    left: 768px;
+  }
+
+  .progress-circle:nth-child(6) {
+    left: 929px;
+  }
+
+  .progress-circle:nth-child(7) {
+    left: 1090px;
+  }
+
+  .progress-inner-black {
+    width: 60.76px;
+    height: 60.76px;
+    left: 4.68px;
+    top: 6.24px;
+  }
+
+  .progress-inner-yellow {
+    width: 60.76px;
+    height: 60.76px;
+    left: 0px;
+    top: 0px;
+    border: 10px black solid;
+  }
+
+  .progress-inner-blue {
+    width: 60.76px;
+    height: 60.76px;
+    left: 0px;
+    top: 0px;
+    border: 10px black solid;
+  }
+
+  .progress-circle-text {
+    width: 50.7px;
+    height: 53.04px;
+    left: 15.14px;
+    top: 24.36px;
+    font-size: 24px;
   }
 }

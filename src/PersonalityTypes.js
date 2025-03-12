@@ -12,6 +12,7 @@ import cheetahImg from './images/Cheetah.png';
 import goldenRetrieverImg from './images/GoldenRetriever.png';
 import capybaraImg from './images/Capybara.png';
 
+// 定义各个动物的详细数据
 const animalData = {
   squirrel: {
     name: 'Squirrel',
@@ -130,16 +131,13 @@ const animalData = {
 const animalKeys = Object.keys(animalData);
 
 const IntroductionPage = () => {
-  // 初始状态设置为 penguin
   const [selectedAnimal, setSelectedAnimal] = useState('penguin');
   const animal = animalData[selectedAnimal];
 
   return (
     <div className="page-container">
-      
-      {/* 内容区域：左侧详情 + 右侧图标 */}
+    
       <div className="content-area">
-        {/* 详情区域 */}
         <div className="detail-container">
           <div className="detail-header">
             <h2 className="detail-title">{animal.name}</h2>
@@ -167,7 +165,7 @@ const IntroductionPage = () => {
             </section>
           </div>
         </div>
-        
+
         <div className="icons-container">
           {animalKeys.map((key) => (
             <div
